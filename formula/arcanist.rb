@@ -3,24 +3,12 @@ class Arcanist < Formula
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
   depends_on "php"
   depends_on "git"
-  stable do
-    url "https://github.com/honeybar/homebrew-arcanist/raw/master/arcanist-conduit-6.tar.gz"
-    sha256 "75888393e3f0ffb8a567a877b31903db8390b622f73ad501b8eb1bcafb4320fa"
-    version "201802151"
+  url "https://github.com/phacility/arcanist/archive/master.tar.gz"
+  version "latest"
 
-    resource "libphutil" do
-      url "https://github.com/honeybar/homebrew-arcanist/raw/master/libphutil-conduit-5.tar.gz"
-      sha256 "a46f0721fa8166ed5edf24ecfe395d7d41e4728681969dded12c664c6fb2074e"
-      version "201802151"
-    end
-  end
-
-  head do
-    url "https://github.com/phacility/arcanist.git"
-
-    resource "libphutil" do
-      url "https://github.com/phacility/libphutil.git"
-    end
+  resource "libphutil" do
+    url "https://github.com/phacility/libphutil/archive/master.tar.gz"
+    version "latest"
   end
 
   
